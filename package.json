@@ -1,0 +1,28 @@
+{
+  "name": "DApp-skeleton",
+  "version": "1.0.0",
+  "description": "pure html and JS frontend and smart contract backend",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test",
+    "coverage": "solidity-coverage",
+    "lint": "solhint contracts/*",
+    "build": "truffle compile",
+    "flat": "truffle-flattener contracts/HelloWorld.sol > ./HelloWorldFlat.sol",
+    "serve": "http-server frontend"
+  },
+  "author": "kabl",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "solhint": "^1.4.0",
+    "solidity-coverage": "^0.5.11",
+    "truffle-flattener": "^1.2.10"
+  },
+  "dependencies": {
+    "openzeppelin-solidity": "^2.0.0",
+    "truffle-hdwallet-provider": "^1.0.5"
+  }
+}

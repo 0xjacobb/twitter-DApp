@@ -1,9 +1,10 @@
-# DApp Skeleton
+# Twitter Ethereum DApp
 
-Very simple application. It contains two parts:
+## What is the code doing?
 
-- The hello world smart contract
-- A pure HTML+JS frontend
+It is a very basic Ethereum DApp, which listening for Tweets which contains a specific hashtag (#giveMeTSTToken) - "give me twitter streaming token". If such a Tweet appears, the application sends TST token to the ERC20 address: 0x158D2d565f55D04285B8489B7dC08edCe9c0ffE9 (please change if you want :-) ). This code was written during the Swisscom Blockchain Academy Seminar "Ethereum for Developer", May 2019.
+
+The code runs only on a local testnet. 
 
 ## Requirements
 
@@ -31,7 +32,7 @@ truffle test
 # Deploy the smart contracts
 truffle deploy
 
-# Check the output. If the address if different adjust it in the index.html
+# Check the output. If the address is different adjust it in the index.html
 # HelloWorld.sol address: 0xfcbcde1df4bcc3a65bb0b842b9fb5b5a7b8e277f
 
 # Retrieve the addresses from deployed contracts
@@ -43,36 +44,18 @@ npm run serve
 # Open Browser: http://localhost:8080
 ```
 
-## Frontend
-
-You can just open the index.html. In that case it will use the accounts from ganache-cli.
-
-You can serve the frontend through a simple web-server `npm run serve`. And access it through `http://localhost:8080`
-
 ## Troubleshooting
 
-There are sometimes issues with the frontend. Make sure these steps:
-
-- Use Chrome
-- Unlock MetaMask and refresh
-- Open the Browsers "Console" by pressing F12. Check the logs
-- Refresh the page (pressing F5) with unlocked MetaMask
-- Double check the smart contract address with the address configure in the frontend
 - Make sure you started `ganache-cli` with the right Mnemonic
 - Make sure you initialized MetaMask with the exactly the same Mnemonic
-- If you modified the smart contract make sure update the ABI in the frontend
-- If you redeploy the smart contract make sure you're using the new address in the frontend
 
-## Deployment to Rinkeby
 
-Checkout `truffle-config.js`
+## Future ideas (to do)
 
-```bash
-# Deploy to the 'rinkeby' network
-# Set your private key in the 'truffle-config.js' file
-truffle deploy --network rinkeby
-```
+- add functionality to set the recipient address in the tweet itself
+- make code running on Rinkeby test net
 
-### Past deployments
+## Credits
 
-2018-12-04 Deployment: https://rinkeby.etherscan.io/address/0x5eace2370d25b0109fb16da51f2ab6e620d08ad5
+- [Swisscom Blockchain Academy for the skeleton](https://github.com/swisscom-blockchain/dapp-skeleton)   
+- 

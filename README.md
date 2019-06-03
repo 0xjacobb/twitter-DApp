@@ -10,11 +10,18 @@ The code runs only on a local testnet.
 
 Following tools are required:
 
+- Twitter Developer Account
 - Truffle
 - NPM
 - Python
 
 The first time you checkout the project run a `npm install`.
+
+## Installation
+
+1. change **twitter_credentials_TODO.py** to **twitter_credentials.py** and fill in your own keys from the twitter developer account
+2. Install...
+3. Install...
 
 ## Smart Contract
 

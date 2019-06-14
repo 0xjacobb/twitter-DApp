@@ -21,25 +21,24 @@ The first time you checkout the project run a `npm install`.
 
 The project structure is a *Truffle*  and *NPM* project. With NPM we can add additional libraries if required and also manage all tools. With Truffle we have the testing framework.
 
-**contracts**: in this folder are the smart contracts   
-**test**: Unit or integration tests are written in JavaScript. They are based on the *Moca* testing framework and *Chai* for assertions   
-**migrations**: Scripts for smart contracts deployments   
-**1_initial_-migrations.js** and **2_deployTwitterStreamer.js**: Deployment files
-**truffle-config.js**: Configuration file which setting up a single development network on the machine running on 127.0.0.1:8545. It specifies witch networks are available for deployment [Doc](https://www.trufflesuite.com/docs/truffle/reference/configuration) 
-**package-lock.json**: dependencies  
+- **contracts**: in this folder are the smart contracts   
+- **test**: Unit or integration tests are written in JavaScript. They are based on the *Moca* testing framework and *Chai* for assertions   
+- **migrations**: Scripts for smart contracts deployments   
+- **1_initial_-migrations.js** and **2_deployTwitterStreamer.js**: Deployment files   
+- **truffle-config.js**: Configuration file which setting up a single development network on the machine running on 127.0.0.1:8545. It specifies witch networks are available for deployment [Doc](https://www.trufflesuite.com/docs/truffle/reference/configuration   
+- **package-lock.json**: dependencies  
 
 
 ## Installation
 
 1. change **twitter_credentials_TODO.py** to **twitter_credentials.py** and fill in your own keys from the twitter developer account
-2. Install...
-3. Install...
+2. Install...(work in progress)
 
 ## Run the code
 
 1. Open command line tool (e.g Terminal)
 2. cd into project folder
-3. 
+3. ... (work in progress)
 
 ```bash
 # Ganache CLI is required

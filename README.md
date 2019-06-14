@@ -15,8 +15,6 @@ Following tools are required:
 - NPM
 - Python
 
-The first time you checkout the project run a `npm install`.
-
 ## Project structure
 
 The project structure is a *Truffle*  and *NPM* project. With NPM we can add additional libraries if required and also manage all tools. With Truffle we have the testing framework.
@@ -26,13 +24,16 @@ The project structure is a *Truffle*  and *NPM* project. With NPM we can add add
 - **migrations**: Scripts for smart contracts deployments   
 - **1_initial_-migrations.js** and **2_deployTwitterStreamer.js**: Deployment files   
 - **truffle-config.js**: Configuration file which setting up a single development network on the machine running on 127.0.0.1:8545. It specifies witch networks are available for deployment [Doc](https://www.trufflesuite.com/docs/truffle/reference/configuration   
-- **package-lock.json**: dependencies  
+- **package-lock.json**: installed packages   
+- **package.json**: This file is called by `npm install`
 
 
 ## Installation
 
 1. change **twitter_credentials_TODO.py** to **twitter_credentials.py** and fill in your own keys from the twitter developer account
-2. Install...(work in progress)
+2. Instal
+3. [Update NPM](https://docs.npmjs.com/updating-packages-downloaded-from-the-registry) `npm update`
+4. ...(work in progress)
 
 ## Run the code
 

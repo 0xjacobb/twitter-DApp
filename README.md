@@ -31,24 +31,24 @@ The project structure is a *Truffle*  and *NPM* project. With NPM we can add add
 ## Installation
 
 1. change **twitter_credentials_TODO.py** to **twitter_credentials.py** and fill in your own keys from the twitter developer account
-2. Instal
-3. [Update NPM](https://docs.npmjs.com/updating-packages-downloaded-from-the-registry) `npm update`
-4. ...(work in progress)
+2. Install **npm** (for mac: `brew install node`). Check if installation was successfull with: `npm -v`. If you already have **npm** [Update NPM](https://docs.npmjs.com/updating-packages-downloaded-from-the-registry) `npm update` or `npm update --save`
+3. [Download and install Ganache](https://www.trufflesuite.com/docs/ganache/quickstart) or `npm install -g ganache-cli`   
+4. Install **Truffle** with: `npm install -f truffle`
+
+...(work in progress)
 
 ## Run the code
 
 1. Open command line tool (e.g Terminal)
 2. cd into project folder
-3. ... (work in progress)
-
+3. 
 ```bash
 # Ganache CLI is required
 # You can start it with a specific mnemonic
 # You can use an other one too. If you use MetaMask make sure you initialize MM with the same Mnemonic
+# You don't need to specifi the mnemonic if you want, Ganache provide new opne for you
+ganache-cli 
 ganache-cli -m "venture truth carry onion picnic wrong youth purchase injury cloud security danger"
-
-# Test the smart contracts
-truffle test
 
 # Deploy the smart contracts
 truffle deploy
@@ -58,11 +58,6 @@ truffle deploy
 
 # Retrieve the addresses from deployed contracts
 truffle networks
-
-# Start the frontend
-npm run serve
-
-# Open Browser: http://localhost:8080
 ```
 
 ## Troubleshooting
@@ -79,4 +74,4 @@ npm run serve
 ## Credits
 
 - [Swisscom Blockchain Academy for the skeleton](https://github.com/swisscom-blockchain/dapp-skeleton)   
-- 
+- [Setting Up Ethereum Development Environment on MacOS](https://medium.com/coinmonks/setting-up-ethereum-development-environment-on-macos-22c96a136ac4)

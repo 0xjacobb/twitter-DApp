@@ -1,7 +1,7 @@
 {
-  "name": "DApp-skeleton",
+  "name": "twitter-DApp",
   "version": "1.0.0",
-  "description": "pure html and JS frontend and smart contract backend",
+  "description": "CLI and smart contract backend",
   "directories": {
     "test": "test"
   },
@@ -10,10 +10,10 @@
     "coverage": "solidity-coverage",
     "lint": "solhint contracts/*",
     "build": "truffle compile",
-    "flat": "truffle-flattener contracts/HelloWorld.sol > ./HelloWorldFlat.sol",
+    "flat": "truffle-flattener contracts/TwitterStreamer.sol > ./TwitterStreamerFlat.sol",
     "serve": "http-server frontend"
   },
-  "author": "kabl",
+  "author": "0xjacobb",
   "license": "MIT",
   "devDependencies": {
     "http-server": "^0.11.1",

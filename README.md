@@ -13,7 +13,7 @@ Following tools are required:
 - Twitter Developer Account (You need a access token for the Twitter API)
 - Truffle
 - NPM
-- Python
+- Python with various libraries 
 
 ## Project structure
 
@@ -34,6 +34,8 @@ The project structure is a *Truffle*  and *NPM* project. With NPM we can add add
 2. Install **npm** (for mac: `brew install node`). Check if installation was successfull with: `npm -v`. If you already have **npm** [Update NPM](https://docs.npmjs.com/updating-packages-downloaded-from-the-registry) `npm update` or `npm update --save`
 3. [Download and install Ganache](https://www.trufflesuite.com/docs/ganache/quickstart) or `npm install -g ganache-cli`   
 4. Install **Truffle** with: `npm install -g truffle`
+5. Install Tweepy for python: `pip3 install tweepy`
+6. Install Python implementation of web3.js: `pip3 install web3`
 
 
 ## Run the code

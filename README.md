@@ -23,7 +23,7 @@ The project structure is a *Truffle*  and *NPM* project. With NPM we can add add
 - `test`: Unit or integration tests are written in JavaScript. They are based on the *Moca* testing framework and *Chai* for assertions   
 - `migrations`: Scripts for smart contracts deployments   
 - `1_initial_-migrations.js` and `2_deployTwitterStreamer.js`: Deployment files for Truffle   
-- `truffle-config.js`: Configuration file which setting up a single development network on the machine running on 127.0.0.1:8545. It specifies witch networks are available for deployment [Doc](https://www.trufflesuite.com/docs/truffle/reference/configuration   
+- `truffle-config.js`: Configuration file which setting up a single development network on the machine running on 127.0.0.1:8545. It specifies witch networks are available for deployment [Doc](https://www.trufflesuite.com/docs/truffle/reference/configuration)  
 - `package-lock.json`: installed packages   
 - `package.json`: This file is called by `npm install`
 

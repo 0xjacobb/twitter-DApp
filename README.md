@@ -1,8 +1,8 @@
 # Twitter Ethereum DApp
 
-## What is the code doing?
+## Overview
 
-It is a very basic Ethereum DApp, which listening for Tweets which contains a specific hashtag (**#giveMeTSTToken**) - "give me twitter streaming token". If such a Tweet appears, the application sends TST token to the ERC20 address: 0x158D2d565f55D04285B8489B7dC08edCe9c0ffE9 (please change if you want :-) ). This code was written during the Swisscom Blockchain Academy Seminar "Ethereum for Developer", May 2019.
+This project is a very basic Ethereum DApp, which listen for Tweets which contains a specific hashtag (**#giveMeTSTToken**) - "give me twitter streaming token". If such a Tweet appears, the application sends TST token to the ERC20 address: 0x158D2d565f55D04285B8489B7dC08edCe9c0ffE9 (please change if you want :-) ). This code was written during the Swisscom Blockchain Academy Seminar "Ethereum for Developer", May 2019.
 
 **The code runs actually only on a local testnet** 
 
@@ -19,16 +19,20 @@ Following tools are required:
 
 The project structure is a *Truffle*  and *NPM* project. With NPM we can add additional libraries if required and also manage all tools. With Truffle we have the testing framework.
 
-- `contracts`: in this folder are the smart contracts   
-- `test`: Unit or integration tests are written in JavaScript. They are based on the *Moca* testing framework and *Chai* for assertions   
-- `migrations`: Scripts for smart contracts deployments   
-- `1_initial_-migrations.js` and `2_deployTwitterStreamer.js`: Deployment files for Truffle   
-- `truffle-config.js`: Configuration file which setting up a single development network on the machine running on 127.0.0.1:8545. It specifies witch networks are available for deployment [Doc](https://www.trufflesuite.com/docs/truffle/reference/configuration)  
-- `package-lock.json`: installed packages   
-- `package.json`: This file is called by `npm install`
+twitter-DApp
+    ├── build
+    │   └── contracts                  # JSON build from Ethereum smart contracts
+    ├── contracts                      # Ethereum Smart Contracts
+    ├── migrartions                    # Scripts for Smart Contracts deployment for Truffle
+    ├── node_modules                   # npm packages 
+    ├── contractJSONABI.json           # 
+    ├── package-lock.json              # Describe a single npm representation of a dependency packages 
+    ├── package.json                   # npm installtion packages is called by `npm install`
+    ├── truffle-config.js              # Configuration file which setting up a single development network [Doc](https://www.trufflesuite.com/docs/truffle/reference/configuration)
+    ├── twitter_credentials_TODO.py    # Twitter API credentials file (have to be modified) 
+    ├── twitter_streamer.py            # file which listening for Tweets
 
-
-## Installation
+## Step-by-Step installation instruction for Mac
 
 1. change `twitter_credentials_TODO.py` to `twitter_credentials.py` and fill in your own keys from the twitter developer account
 2. Install **npm** (for mac: `brew install node`). Check if installation was successfull with: `npm -v`. If you already have **npm** [Update NPM](https://docs.npmjs.com/updating-packages-downloaded-from-the-registry) `npm update` or `npm update --save`

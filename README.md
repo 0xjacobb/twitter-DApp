@@ -22,11 +22,11 @@ The project structure is a *Truffle*  and *NPM* project. With NPM we can add add
 ```bash
 twitter-DApp   
     ├── build   
-    │   └── contracts                  # JSON build from Ethereum smart contracts   
-    ├── contracts                      # Ethereum Smart Contracts   
-    ├── migrartions                    # Scripts for Smart Contracts deployment for Truffle   
+    │   └── contracts                  # JSON builds from Ethereum smart contracts   
+    ├── contracts                      # Contains all the Ethereum Smart Contracts   
+    ├── migrartions                    # Contains scripts for Smart Contracts deployment for Truffle   
     ├── node_modules                   # npm packages   
-    ├── contractJSONABI.json           #    
+    ├── contractJSONABI.json           # application binary interface (ABI), needed for for encoding/decoding data into/out of the machine code [Reference](https://ethereum.stackexchange.com/questions/234/what-is-an-abi-and-why-is-it-needed-to-interact-with-contracts)  
     ├── package-lock.json              # Describe a single npm representation of a dependency packages    
     ├── package.json                   # npm installtion packages is called by `npm install`   
     ├── truffle-config.js              # Configuration file which setting up a single development network [Doc](https://www.trufflesuite.com/docs/truffle/reference/configuration)   

@@ -1,8 +1,11 @@
 # Twitter Ethereum DApp
 
+## Status
+In progress, not working
+
 ## Overview
 
-This project is a very basic Ethereum DApp, which listen for Tweets which contains a specific hashtag (**#giveMeTSTToken**) - "give me twitter streaming token". If such a Tweet appears, the application sends TST token to the ERC20 address: 0x158D2d565f55D04285B8489B7dC08edCe9c0ffE9 (please change if you want :-) ). This code was written during the Swisscom Blockchain Academy Seminar "Ethereum for Developer", May 2019.
+This project is a very basic Ethereum DApp, which listen for Tweets which contains a specific hashtag (**#giveMeTSTToken**) - "give me twitter streaming token". If such a Tweet appears, the application sends TST token to the specified ERC20 Smart Contract address. This code was written during the Swisscom Blockchain Academy Seminar "Ethereum for Developer", May 2019.
 
 **The code runs actually only on a local testnet** 
 
@@ -59,8 +62,11 @@ To stop the isolated `(ven)`environment use command: `deactivate`
 4. Open a new Terminal tab and deploy Smart Contract on the local testnet: `truffle deploy`
 5. [OPTIONAL] Check the output. put the address from ..... into ....
 6. [OPTIONAL] Retrieve the addresses from deployed contracts if needed with: `truffle networks`
-7. Start `twitter_streamer.py`in a new Terminal with: `python3 twitter-streamer.py`
-8. Post a Tweet on Twitter with hashtag: `#giveMeTSTToken`
+7. change the `contract_address` in method `on_data(self, raw_data)`from `twitter_streamer.py` with address provided after `truffle deploy`
+8. change the `private_key` in method `on_data(self, raw_data)`from `twitter_streamer.py` with ...?
+9. change `address_for` in method `on_data(self, raw_data)`from `twitter_streamer.py` with ...?
+10. Start `twitter_streamer.py`in a new Terminal with: `python3 twitter-streamer.py`
+11. Post a Tweet on Twitter with hashtag: `#giveMeTSTToken`
 
 ## Troubleshooting
 

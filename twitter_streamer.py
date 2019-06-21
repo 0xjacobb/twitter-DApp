@@ -101,6 +101,8 @@ class TwitterListener(StreamListener):
         contract_address = '<FILL IN CONTRACT ADDRESS>'
         # Private Key`
         private_key = '<FILL IN PRIVATE KEY>'
+        # Adress TBD
+        address_for = '<FILL IN ADDRESS>'
 
         try:
             json_load = json.loads(raw_data)
@@ -130,14 +132,16 @@ class TwitterListener(StreamListener):
             # send message to contract
             print('Get some Tokens...')
             tx_hash = free_tokkens.functions.mintToken(
-                '0x9b26a3C40d32BD9e40266711Fd89ea9387340E90').transact()
+                address_for).transact()
+            # tx_hash = free_tokkens.functions.mintToken('0x9b26a3C40d32BD9e40266711Fd89ea9387340E90').transact()
 
             # Wait for transaction to be mined...
             w3.eth.waitForTransactionReceipt(tx_hash)
 
             # Read out message
+            #print('Balance: {}'.format(free_tokkens.functions.balanceOf('0x9b26a3C40d32BD9e40266711Fd89ea9387340E90').call()))
             print('Balance: {}'.format(free_tokkens.functions.balanceOf(
-                '0x9b26a3C40d32BD9e40266711Fd89ea9387340E90').call()))
+                address_for).call()))
 
             # Save to file
             with open(self.fetched_tweets_filename, 'a') as tf:

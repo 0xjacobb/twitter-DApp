@@ -28,7 +28,8 @@ twitter-DApp
     ├── node_modules                   # npm packages   
     ├── contractJSONABI.json           # application binary interface (ABI), needed for for encoding/decoding data into/out of the machine code [Reference](https://ethereum.stackexchange.com/questions/234/what-is-an-abi-and-why-is-it-needed-to-interact-with-contracts)  
     ├── package-lock.json              # Describe a single npm representation of a dependency packages    
-    ├── package.json                   # npm installtion packages is called by `npm install`   
+    ├── package.json                   # npm installtion packages is called by `npm install`
+    ├── requirements.txt               # packages list for Python  (installed via pip)     
     ├── truffle-config.js              # Configuration file which setting up a single development network [Doc](https://www.trufflesuite.com/docs/truffle/reference/configuration)   
     ├── twitter_credentials_TODO.py    # Twitter API credentials file (have to be modified)   
     ├── twitter_streamer.py            # file which listening for Tweets

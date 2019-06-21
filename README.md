@@ -60,13 +60,11 @@ To stop the isolated `(ven)`environment use command: `deactivate`
 2. `cd` into project folder
 3. Start local testnet: `ganache -cli` (If you use Metamask, initialize Metamask with the Mnemonic which ganache-cli provides you)   
 4. Open a new Terminal tab and deploy Smart Contract on the local testnet: `truffle deploy`
-5. [OPTIONAL] Check the output. put the address from ..... into ....
-6. [OPTIONAL] Retrieve the addresses from deployed contracts if needed with: `truffle networks`
-7. change the `contract_address` in method `on_data(self, raw_data)`from `twitter_streamer.py` with address provided after `truffle deploy`
-8. change the `private_key` in method `on_data(self, raw_data)`from `twitter_streamer.py` with ...?
-9. change `address_for` in method `on_data(self, raw_data)`from `twitter_streamer.py` with ...?
-10. Start `twitter_streamer.py`in a new Terminal with: `python3 twitter-streamer.py`
-11. Post a Tweet on Twitter with hashtag: `#giveMeTSTToken`
+   [OPTIONAL] Retrieve the addresses from deployed contracts if needed with: `truffle networks`
+5. change the `contract_address` in method `on_data(self, raw_data)`from `twitter_streamer.py` with address provided after `truffle deploy` of the Smart Contract
+6. change `receiver_address` in method `on_data(self, raw_data)`from `twitter_streamer.py` with your own (Metamask) address
+7. Start `twitter_streamer.py`in a new Terminal with: `python3 twitter-streamer.py`
+8. Post a Tweet on Twitter with hashtag: `#giveMeTSTToken`
 
 ## Troubleshooting
 
@@ -77,7 +75,7 @@ To stop the isolated `(ven)`environment use command: `deactivate`
 ## Future ideas (to do)
 
 - add functionality to set the recipient address in the tweet itself
-- make code running on Rinkeby test net
+- make code running on Rinkeby test net. For that you need to specifie the private key manually in the code (not implemented yet)
 
 ## Credits
 

@@ -97,6 +97,11 @@ class TwitterListener(StreamListener):
 
     # Method who takes the data (listening to tweets)
     def on_data(self, raw_data):
+         # TwitterStreamer.sol Smart Contract address which was provided during `truffle deploy`
+        contract_address = '<FILL IN CONTRACT ADDRESS>'
+        # Private Key`
+        private_key = '<FILL IN PRIVATE KEY>'
+
         try:
             json_load = json.loads(raw_data)
             text = json_load['text']
@@ -104,7 +109,7 @@ class TwitterListener(StreamListener):
             s = str(coded)
             print("########## NEW TWEET: Nr: %i ########## \n" %
                   (self.i), s[2:-1])
-            
+
             #print("Address is: ", re.search("0x.{40}",s).group())
             #receiver_address = re.search("0x.{40}",s).group()
 
@@ -114,30 +119,25 @@ class TwitterListener(StreamListener):
             print("LOCATION", s)
             print()
 
-            '''MORE CODE HERE'''
-            contractAddress = '0x158D2d565f55D04285B8489B7dC08edCe9c0ffE9'
-            private_key = '0x977E6E0B3F7F199F224D08E1312DD140B5B88B5894EE28360C7FC94A36996899'
-
             with open("./contractJSONABI.json") as f:
                 info_json = json.load(f)
             abi = info_json
             w3 = Web3(HTTPProvider("http://127.0.0.1:8545"))
-            greeter = w3.eth.contract(address=contractAddress, abi=abi,)
+            free_tokkens = w3.eth.contract(address=contract_address, abi=abi,)
 
             # set sender account (Account from ganache)
             w3.eth.defaultAccount = w3.eth.accounts[0]
-            # send message to contract 
+            # send message to contract
             print('Get some Tokens...')
-            tx_hash = greeter.functions.mintToken('0x9b26a3C40d32BD9e40266711Fd89ea9387340E90').transact()
-            # print('Setting the greeting to Nihao...')
-            # tx_hash = greeter.functions.setMessage('Nihao').transact()
+            tx_hash = free_tokkens.functions.mintToken(
+                '0x9b26a3C40d32BD9e40266711Fd89ea9387340E90').transact()
 
             # Wait for transaction to be mined...
             w3.eth.waitForTransactionReceipt(tx_hash)
-            
+
             # Read out message
-            #print('Default contract greeting: {}'.format(greeter.functions.message().call()))
-            print('Balance: {}'.format(greeter.functions.balanceOf('0x9b26a3C40d32BD9e40266711Fd89ea9387340E90').call()))
+            print('Balance: {}'.format(free_tokkens.functions.balanceOf(
+                '0x9b26a3C40d32BD9e40266711Fd89ea9387340E90').call()))
 
             # Save to file
             with open(self.fetched_tweets_filename, 'a') as tf:

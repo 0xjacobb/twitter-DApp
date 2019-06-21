@@ -19,6 +19,7 @@ Following tools are required:
 
 The project structure is a *Truffle*  and *NPM* project. With NPM we can add additional libraries if required and also manage all tools. With Truffle we have the testing framework.
 
+```bash
 twitter-DApp   
     ├── build   
     │   └── contracts                  # JSON build from Ethereum smart contracts   
@@ -31,6 +32,7 @@ twitter-DApp
     ├── truffle-config.js              # Configuration file which setting up a single development network [Doc](https://www.trufflesuite.com/docs/truffle/reference/configuration)   
     ├── twitter_credentials_TODO.py    # Twitter API credentials file (have to be modified)   
     ├── twitter_streamer.py            # file which listening for Tweets
+```
 
 ## Step-by-Step installation instruction for Mac
 

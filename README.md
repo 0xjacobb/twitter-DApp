@@ -1,7 +1,7 @@
 # Twitter Ethereum DApp
 
 ## Status
-In progress, **not tested**
+Work in progress, **not tested**
 
 ## Overview
 

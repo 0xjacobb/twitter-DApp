@@ -41,7 +41,8 @@ twitter-DApp
 
 ## Step-by-Step installation guide for Mac
 
-One of the easiest way is to use [Homebrew](https://brew.sh/index_de) for installtion of Python3, NPM etc. run this in your Terminal if you need to install Homebrew.```/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```
+One of the easiest way is to use [Homebrew](https://brew.sh/index_de) for installation of Python3, NPM etc. Run this in your Terminal if you need to install Homebrew:   
+```/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```
 
 1. change `twitter_credentials_TODO.py` to `twitter_credentials.py` and fill in your own keys from the twitter developer account
 2. Install **npm** (for mac: `brew install node`). Check if installation was successfull with: `npm -v`. If you already have **npm** [Update NPM](https://docs.npmjs.com/updating-packages-downloaded-from-the-registry) `npm update` or `npm update --save`
@@ -55,7 +56,7 @@ One of the easiest way is to use [Homebrew](https://brew.sh/index_de) for instal
 
 If you have made additional installations with `pip3` run `pip3 freeze > requirements.txt` to rebuild requirements file for installtion dependencies.
 
-To stop the isolated `(ven)`environment use command: `deactivate`
+To stop the isolated `(venv)`environment use command: `deactivate`
 
 ## Run the code
 

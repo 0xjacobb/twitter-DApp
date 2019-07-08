@@ -65,14 +65,15 @@ class TwitterListener(StreamListener):
     def __init__(self, fetched_tweets_filename):
         self.fetched_tweets_filename = fetched_tweets_filename
         self.i = 0
+        print("--------- START TWITTER LISTENER -----------\n")
 
     # Method who takes the data (listening to tweets) and interact with Smart Contract
     def on_data(self, raw_data):
          # TwitterStreamer.sol Smart Contract address which was provided during `truffle deploy`
-        contract_address = '<FILL IN CONTRACT ADDRESS SHOWN AFTER TRUFFLE DEPLOY>'
+        contract_address = '0x76753Bbb25FB8B0ADe41111b349A9F88FcF61c86'
 
         # Address which receives the TST Tokken
-        receiver_address = '<FILL IN RECIPIENT ADDRESS>'
+        receiver_address = '0x6ac0265dEB25f89Ab2074AACd8741F850fB74119'
 
         try:
             json_load = json.loads(raw_data)

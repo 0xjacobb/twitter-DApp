@@ -45,12 +45,12 @@ twitter-DApp
 3. [Download and install Ganache](https://www.trufflesuite.com/docs/ganache/quickstart) or `npm install -g ganache-cli`   
 4. Install **Truffle**: `npm install -g truffle`
 5. Install xcode developer tools: `xcode-select --install` maybe you need addiotnal configs according to [Doc](https://apple.stackexchange.com/questions/254380/why-am-i-getting-an-invalid-active-developer-path-when-attempting-to-use-git-a) and [Doc](http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/)
-5. Install **virtualvenv** for isolated Python environments:```pip install virtualenv```   
-6. Create isolated Python environment: ```virtualenv venv```
+5. Install **virtualvenv** for isolated Python environments:```pip3 install virtualenv```   
+6. Create isolated Python environment: first ```cd``` into project, second```virtualenv venv```
 7. Activate virtual environment: ```source venv/bin/activate```   
-8. Install dependencies: ```pip install -r requirements.txt``` 
+8. Install dependencies: ```pip3 install -r requirements.txt``` 
 
-If you have made additional installations with `pip` run `pip freeze > requirements.txt` to rebuild requirements file for installtion dependencies.
+If you have made additional installations with `pip3` run `pip3 freeze > requirements.txt` to rebuild requirements file for installtion dependencies.
 
 To stop the isolated `(ven)`environment use command: `deactivate`
 
@@ -59,11 +59,11 @@ To stop the isolated `(ven)`environment use command: `deactivate`
 1. Open command line tool (e.g Terminal for Mac)
 2. `cd` into project folder
 3. Start local testnet: `ganache -cli` (If you use Metamask, initialize Metamask with the Mnemonic which ganache-cli provides you)   
-4. Open a new Terminal tab and deploy Smart Contract on the local testnet: `truffle deploy`
+4. Open a new Terminal tab `cd` into project folder and deploy Smart Contract on the local testnet: `truffle deploy`
    [OPTIONAL] Retrieve the addresses from deployed contracts if needed with: `truffle networks`
 5. change the `contract_address` in method `on_data(self, raw_data)`from `twitter_streamer.py` with address provided after `truffle deploy` of the Smart Contract
 6. change `receiver_address` in method `on_data(self, raw_data)`from `twitter_streamer.py` with your own (Metamask) address
-7. Start `twitter_streamer.py`in a new Terminal with: `python3 twitter-streamer.py`
+7. Start `twitter_streamer.py`in a new Terminal with: `python3 twitter_streamer.py`
 8. Post a Tweet on Twitter with hashtag: `#giveMeTSTToken`
 
 ## Troubleshooting

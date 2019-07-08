@@ -15,6 +15,7 @@ Following tools are required:
 
 - Twitter Developer Account (You need a access token for the Twitter API)
 - Truffle
+- Homebrew (Mac packaging manager)
 - NPM
 - Python with various libraries 
 
@@ -40,11 +41,13 @@ twitter-DApp
 
 ## Step-by-Step installation guide for Mac
 
+One of the easiest way is to use [Homebrew](https://brew.sh/index_de) for installtion of Python3, NPM etc. run this in your Terminal if you need to install Homebrew.```/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```
+
 1. change `twitter_credentials_TODO.py` to `twitter_credentials.py` and fill in your own keys from the twitter developer account
 2. Install **npm** (for mac: `brew install node`). Check if installation was successfull with: `npm -v`. If you already have **npm** [Update NPM](https://docs.npmjs.com/updating-packages-downloaded-from-the-registry) `npm update` or `npm update --save`
 3. [Download and install Ganache](https://www.trufflesuite.com/docs/ganache/quickstart) or `npm install -g ganache-cli`   
 4. Install **Truffle**: `npm install -g truffle`
-5. Install xcode developer tools: `xcode-select --install` maybe you need addiotnal configs according to [Doc](https://apple.stackexchange.com/questions/254380/why-am-i-getting-an-invalid-active-developer-path-when-attempting-to-use-git-a) and [Doc](http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/)
+5. [OPTIONAL] Install xcode developer tools separatly. If you have ```homebrew```installed on your mac, ```xcode command line tools``` are already installed. `xcode-select --install` maybe you need additional configs according to [Doc](https://apple.stackexchange.com/questions/254380/why-am-i-getting-an-invalid-active-developer-path-when-attempting-to-use-git-a) and [Doc](http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/)
 5. Install **virtualvenv** for isolated Python environments:```pip3 install virtualenv```   
 6. Create isolated Python environment: first ```cd``` into project, second```virtualenv venv```
 7. Activate virtual environment: ```source venv/bin/activate```   

@@ -1,4 +1,5 @@
 twitter_credentials.py
+tweets.txt
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

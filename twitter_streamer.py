@@ -70,7 +70,7 @@ class TwitterListener(StreamListener):
     # Method who takes the data (listening to tweets) and interact with Smart Contract
     def on_data(self, raw_data):
          # TwitterStreamer.sol Smart Contract address which was provided during `truffle deploy`
-        contract_address = '0x76753Bbb25FB8B0ADe41111b349A9F88FcF61c86'
+        contract_address = '0x12696aB886d174F8Dbb1AAcCA97F9D163A7B80d9'
 
         # Address which receives the TST Tokken
         receiver_address = '0x6ac0265dEB25f89Ab2074AACd8741F850fB74119'

@@ -62,13 +62,16 @@ To stop the isolated `(venv)`environment use command: `deactivate`
 
 1. Open command line tool (e.g Terminal for Mac)
 2. `cd` into project folder
-3. Start local testnet: `ganache -cli` (If you use Metamask, initialize Metamask with the Mnemonic which ganache-cli provides you)   
+3. Start local testnet: `ganache -cli` (If you use Metamask, initialize Metamask with the Mnemonic which ganache-cli provides you) 
 4. Open a new Terminal tab `cd` into project folder and deploy Smart Contract on the local testnet: `truffle deploy`
    [OPTIONAL] Retrieve the addresses from deployed contracts if needed with: `truffle networks`
 5. change the `contract_address` in method `on_data(self, raw_data)`from `twitter_streamer.py` with address provided after `truffle deploy` of the Smart Contract
 6. change `receiver_address` in method `on_data(self, raw_data)`from `twitter_streamer.py` with your own (Metamask) address
-7. Start `twitter_streamer.py`in a new Terminal with: `python3 twitter_streamer.py`
-8. Post a Tweet on Twitter with hashtag: `#giveMeTSTToken`
+7. Open a new Terminal tab `cd` into project folder and activate virtual environment: `source venv/bin/activate`
+8. Choose the `localhost` network in Metamask   
+9. Add the TST Token to Metamask: `add custom token`-> paste contract address which was provided during `truffle deploy` -> Tokensymbol: `TST`
+10. Start `twitter_streamer.py`in a new Terminal with: `python3 twitter_streamer.py`
+11. Post a Tweet on Twitter with hashtag: `#giveMeTSTToken`
 
 ## Troubleshooting
 

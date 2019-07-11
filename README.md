@@ -1,7 +1,7 @@
 # Twitter Ethereum DApp
 
 ## Status
-Work in progress, **not tested**
+Working release for Ethereum local testnet
 
 ## Overview
 
